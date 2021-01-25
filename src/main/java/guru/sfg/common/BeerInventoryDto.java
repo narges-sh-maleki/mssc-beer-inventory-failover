@@ -8,15 +8,18 @@ import lombok.NoArgsConstructor;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
+/**
+ * Created by jt on 2019-05-31.
+ */
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class InventoryFailOverDto {
-    private UUID Id;
+@Builder
+public class BeerInventoryDto {
+    private UUID id;
     private OffsetDateTime createdDate;
     private OffsetDateTime lastModifiedDate;
-    //private UUID beerId = UUID.randomUUID();
-    @Builder.Default
-    private Integer quantityOnHand = 999;
+    private UUID beerId;
+    private String upc;
+    private Integer quantityOnHand;
 }
